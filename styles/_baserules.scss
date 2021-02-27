@@ -1,0 +1,105 @@
+/*FONTS*/
+$montserrat: "Montserrat", sans-serif;
+/*Medium 500- Bold 700*/
+$roboto: "Roboto", sans-serif;
+/*Regular 400- Bold 700*/
+
+/*MEDIA*/
+$middle: "screen and (min-width:500px) and (max-width: 819px)";
+$middleup: "screen and (min-width:820px)";
+$desktop: "screen and (min-width: 1280px)";
+
+/*MIXIN*/
+@mixin search-button {
+  background: #ffffff;
+  border: 1px solid #572ee5;
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  border-radius: 27px;
+  align-items: center;
+  input {
+    position: relative;
+    width: 70%;
+    min-height: 48px;
+    left: 2%;
+    font-family: $roboto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    border: none;
+    @media #{$middleup} {
+      width: 80%;
+    }
+    @media #{$desktop} {
+      width: 85%;
+    }
+  }
+  .sugerir {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+    width: 100%;
+    display: none;
+    flex-flow: column nowrap;
+    border-top: 1px solid rgba(156, 175, 195, 0.5);
+    @media #{$middleup} {
+      margin-left: 8%;
+      margin-right: 8%;
+      padding-left: 4%;
+    }
+    @media #{$desktop} {
+      margin-left: 5%;
+      margin-right: 5%;
+      padding-left: 2.5%;
+    }
+    .sugerencia {
+      font-family: $roboto;
+      font-weight: 400;
+      font-size: 16px;
+      color: #9cafc3;
+      text-align: left;
+      margin-top: 10px;
+      &:first-of-type {
+        margin-top: 14px;
+      }
+      &:last-of-type {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .sp-srch-btn-lft {
+    width: 15%;
+    @media #{$middleup} {
+      width: 10%;
+    }
+    @media #{$desktop} {
+      width: 7%;
+    }
+  }
+  .sp-srch-btn {
+    width: 15%;
+    @media #{$middleup} {
+      width: 10%;
+    }
+    @media #{$desktop} {
+      width: 7%;
+    }
+  }
+  #srch-btn {
+    position: relative;
+    display: block;
+    color: #572ee5;
+    margin: auto;
+    font-size: 25px;
+  }
+  #srch-btn-lft {
+    color: #9cafc3;
+    position: relative;
+    display: block;
+    visibility: hidden;
+    margin: auto;
+    font-size: 25px;
+  }
+}

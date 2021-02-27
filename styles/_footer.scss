@@ -1,0 +1,87 @@
+@import "baserules";
+
+footer {
+  @media #{$middleup} {
+    display: grid;
+    grid-template-columns: 20% 25% 55%;
+    grid-template-rows: 116px;
+    height: 116px;
+    align-content: center;
+  }
+  h4 {
+    font-family: $roboto;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 47px;
+    @media #{$middleup} {
+      text-align: right;
+      margin-top: 0px;
+      align-self: center;
+    }
+  }
+  .redes {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 22px;
+    @media #{$middleup} {
+      align-self: center;
+      margin-top: 0;
+      justify-content: left;
+      margin-left: 15px;
+    }
+    a {
+      margin: 0 3% 0 3%;
+      font-size: 20px;
+      text-align: center;
+      color: #9cafc3;
+      @media #{$middleup} {
+        &:hover {
+          color: #572ee5;
+        }
+      }
+    }
+  }
+  .copyright {
+    font-family: $roboto;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: 46px;
+    margin-bottom: 23px;
+    @media #{$middleup} {
+      text-align: center;
+      margin-top: 0px;
+      align-self: center;
+      margin-bottom: 0px;
+      padding-left: 30%;
+    }
+  }
+}
+
+// DARK MODE
+.cuerpo-dark {
+  .footer {
+    h4 {
+      color: #ffffff;
+    }
+    .redes {
+      a {
+        color: #cdd6e0;
+        @media #{$middleup} {
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .copyright {
+      color: #ffffff;
+    }
+  }
+}

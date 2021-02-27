@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GifOS</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="https://kit.fontawesome.com/e46deb082b.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  </head>
+  <body id="cuerpo" class="cuerpo">
+    <header id="header" class="header">
+      <img src="/assets/logo-mobile.svg" alt="Logo" class="logo" id="logo" />
+      <div class="burguer" id="btn-menu">
+        <i class="fas fa-bars burguer" id="brgr"></i>
+      </div>
+      <div class="search" id="nav-search">
+        <input type="text" name="buscador" id="input-srch-top" placeholder="Busca GIFOS y más" />
+        <span id="srch-drk-top">
+          <i class="fas fa-search" id="srch-drk-top-faw"></i>
+        </span>
+      </div>
+      <nav id="lista" class="disable-menu">
+        <ul>
+          <li><a href="#" id="mode-dark">Modo Nocturno</a></li>
+          <li class="line-white"></li>
+          <li><a href="#" id="favoritos">Favoritos</a></li>
+          <li class="line-white"></li>
+          <li><a href="#" id="mis-gifos">Mis GIFOS</a></li>
+          <li id="li-agregar-gif">
+            <span id="agregar-gif" class="agregar-gif">
+              <i class="fas fa-plus add-gif"></i>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main" class="main">
+      <section id="home" class="home">
+        <h1 id="p-title">Inspírate, busca, guarda, y crea <br />los mejores <span>GIFOS</span></h1>
+        <img src="/assets/ilustra_header.svg" alt="Imagen Cabecera" id="img-header" class="img-header" />
+        <div class="search" id="search">
+          <span id="sp-srch-btn-lft" class="sp-srch-btn-lft"><i class="fas fa-search" id="srch-btn-lft"></i></span>
+          <input type="text" name="buscador" id="input-srch" placeholder="Busca GIFOS y más" />
+          <span id="sp-srch-btn" class="sp-srch-btn"><i class="fas fa-search" id="srch-btn"></i></span>
+          <div id="sugerir" class="sugerir"></div>
+        </div>
+        <h3 id="title-trending" class="title-trending">Trending:</h3>
+        <p id="p-trending" class="p-trending">Reactions, Entertainment, Sports, Stickers, Artists</p>
+        <div id="srch-opc" class="srch-opc">
+          <div id="line" class="line"></div>
+          <h2 id="title-srch" class="title-srch">...</h2>
+          <img src="/assets/icon-favoritos.svg" alt="Icono favoritos" id="icon-favoritos" class="icon-favoritos" />
+          <h2 id="title-favoritos" class="title-favoritos">Favoritos</h2>
+          <img src="/assets/icon-fav-sin-contenido.svg" alt="Icono favoritos sin contenido" id="fav-sincontenido" class="icon-favoritos" />
+          <h3 id="text-fav-sc">"¡Guarda tu primer GIFO en Favoritos para que se muestre aqui!"</h3>
+          <img src="/assets/icon-mis-gifos.svg" alt="Icono mis gifos" id="icon-misgifos" class="icon-misgifos" />
+          <h2 id="title-misgifos" class="title-misgifos">Mis GIFOS</h2>
+          <img src="/assets/icon-mis-gifos-sin-contenido.svg" alt="Icono mis gifos sin contenido" id="misgif-sincontenido" class="icon-misgifos" />
+          <h3 id="text-mg-sc">¡Anímate a crear tu primer GIFO!</h3>
+          <div id="grid-srch" class="grid-srch"></div>
+          <img
+            src="/assets/icon-busqueda-sin-resultado.svg"
+            alt="Busqueda sin resultado"
+            id="search-sinresultado"
+            class="search-sinresultado"
+          />
+          <h3 id="text-sinresultado" class="text-sinresultado">Intenta con otra búsqueda.</h3>
+          <h4 id="ver-mas" class="ver-mas">VER MÁS</h4>
+          <h4 id="ver-mas-fav" class="ver-mas">VER MÁS</h4>
+        </div>
+      </section>
+      <section id="gifosmax" class="gifosmax">
+        <span id="close-btn">
+          <i class="fas fa-times"></i>
+        </span>
+        <img src="/assets/trabajando.png" alt="Gifos-Max" id="imgmax" class="imgmax" />
+        <div id="foot-gifosmax" class="foot-gifosmax">
+          <p id="usermax" class="usermax">Usuario</p>
+          <div id="favmax-box" class="favmax-box">
+            <span id="favmax" class="favmax">
+              <i class="far fa-heart" id="botonFavorito"></i>
+            </span>
+          </div>
+          <div id="downmax-box" class="downmax-box">
+            <span id="downmax" class="downmax">
+              <i class="fas fa-download"></i>
+            </span>
+          </div>
+          <h4 id="titlemax" class="titlemax">Titulo</h4>
+        </div>
+      </section>
+      <section id="grabargif" class="grabargif">
+        <div id="camara-completa" class="camara-completa">
+          <img src="/assets/camara.svg" alt="Camara" id="camara"/>
+          <img src="/assets/element-luz-camara.svg" alt="Luz camara" />
+        </div>
+        <div id="zonaGrabacion" class="zonaGrabacion">
+          <div id="grabacion" class="grabacion">
+            <div id="sup-izq"></div>
+            <div id="sup-der"></div>
+            <div id="centrograbacion">
+              <p id="instructivo">Aquí podrás<br />crear tus propios <span id="gifos-celeste">GIFOS</span></p>
+              <p id="detalle">¡Crea tu GIFO en sólo 3 pasos!<br />(sólo necesitas una cámara para grabar un video)</p>
+            </div>
+            <div id="inf-izq"></div>
+            <div id="inf-der"></div>
+          </div>
+          <div id="pasos">
+            <h5 id="paso1" class="pasos">1</h5>
+            <h5 id="paso2" class="pasos">2</h5>
+            <h5 id="paso3" class="pasos">3</h5>
+          </div>
+        </div>
+        <div class="pelicula">
+          <img src="/assets/pelicula.svg" id="pelicula" alt="Pelicula" />
+        </div>
+        <div id="foot" class="foot">
+        <div id="division" class="division"></div>
+        <h4 id="comenzar" class="comenzar">COMENZAR</h4>
+      </div>
+      </section>
+      <section id="trending" class="trending">
+        <h2>Trending GIFOS</h2>
+        <p>Mira los últimos <br />GIFO de nuestra comunidad.</p>
+        <div class="trending-dsktp">
+          <span id="scroll-left" class="scroll-trending">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+          <div class="trndng-view" id="trndng-view"></div>
+          <span id="scroll-right" class="scroll-trending">
+            <i class="fas fa-chevron-right"></i>
+          </span>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <h4>Compartir en:</h4>
+      <div class="redes">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" title="Facebook"></i></a>
+        <a href="https://twitter.com/"><i class="fab fa-twitter" title="Twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram" title="Instagram"></i></a>
+      </div>
+      <h4 class="copyright">© GIFOS 2020 All Rights Reserved.</h4>
+    </footer>
+    <script src="/js/darkmode.js"></script>
+    <script src="/js/principal.js"></script>
+    <script src="/js/misGifos.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/favoritos.js"></script>
+    <script src="/js/gifosMax.js"></script>
+  </body>
+</html>
