@@ -1821,7 +1821,7 @@ main .trending #scroll-right {
 main .trending .trndng-view {
   display: -ms-grid;
   display: grid;
-  
+  -ms-grid-columns: (243px)[25];
       grid-template-columns: repeat(25, 243px);
   -webkit-column-gap: 22px;
           column-gap: 22px;
@@ -1832,7 +1832,7 @@ main .trending .trndng-view {
 
 @media screen and (min-width: 820px) {
   main .trending .trndng-view {
-    
+    -ms-grid-columns: (300px)[25];
         grid-template-columns: repeat(25, 300px);
     -webkit-column-gap: 29px;
             column-gap: 29px;
@@ -1845,7 +1845,7 @@ main .trending .trndng-view {
 
 @media screen and (min-width: 1280px) {
   main .trending .trndng-view {
-    
+    -ms-grid-columns: (357px)[25];
         grid-template-columns: repeat(25, 357px);
   }
 }
